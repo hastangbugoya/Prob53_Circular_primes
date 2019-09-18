@@ -26,9 +26,9 @@ int main()
 	{
 		if (i % 2 != 0 && i % 5 != 0)
 		{
-			sr = sqrtf(i);
-			for (j = 3; j <= sr && i % j != 0; j++);
-			if (j > sr)
+			//sr = sqrtf(i);
+			//for (j = 3; j <= sr && i % j != 0; j++);
+			if (CheckPrime(i))
 			{
 				n = i;
 				while (n > 0)
@@ -72,14 +72,13 @@ int main()
 					{
 						digitcount = 0;
 					}
-					n = i;
+					n = i; //recycling variable n here
 					for (ctr = 0; ctr < digitcount; ctr++)
 					{
 						temp = (n % 10) * factor;
 						n = n + temp;
 						n = n / 10;
-
-						//check in n is also prime
+						//check if this anagram of n is also prime
 						prime = prime && CheckPrime(n);
 						printf(" => %d", n);
 					}
