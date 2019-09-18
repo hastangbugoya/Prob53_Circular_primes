@@ -17,7 +17,6 @@ int main()
 			if (j > sr)
 			{
 				n = i;
-				
 				while (n > 0)
 				{
 					digit = n % 10;
@@ -30,8 +29,22 @@ int main()
 			}
 		}
 	}
-
 }
+
+/*
+
+int main()
+{
+	unsigned long int i, n = 123456, temp;
+	for (i = 0; i < 5; i++)
+	{
+		temp = (n % 10) * 1000000;
+		n = n + temp;
+		n = n / 10;
+		printf("\n%d", n);
+	}
+}
+*/
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
