@@ -9,7 +9,7 @@ int CheckPrime(unsigned int n)
 	int i;
 	float sr;
 	sr = sqrtf(n);
-	for (i = 2; i < sr && n % i != 0; i++);
+	for (i = 2; i <= sr && n % i != 0; i++);
 	if (i > sr)
 		return 1; // not 0 true
 	return 0;
